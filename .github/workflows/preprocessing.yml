@@ -1,5 +1,8 @@
 name: Automated Data Preprocessing
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -16,6 +19,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v4
