@@ -41,4 +41,10 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add preprocessing/telco_churn_preprocessing/telco_churn_clean.csv
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update processed dataset" && git push)
+
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update processed dataset"
+
+          konflik (fetch first)
+          git pull --rebase origin main
+
+          git push
