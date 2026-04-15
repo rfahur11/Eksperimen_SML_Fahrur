@@ -45,7 +45,7 @@ class DataPreprocessor:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Automasi Preprocessing Telco Churn")
     parser.add_argument('--input', type=str, required=True, help="Path ke dataset raw")
-    parser.add_argument('--output', type=str, required=True, help="Path ke dataset bersih...")
+    parser.add_argument('--output', type=str, required=True, help="Path ke dataset bersih ...")
     args = parser.parse_args()
 
     preprocessor = DataPreprocessor(args.input, args.output)
